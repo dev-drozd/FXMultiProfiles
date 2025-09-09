@@ -16,21 +16,23 @@ With this script, you can easily:
 
 ## ⚙️ Installation
 
-1. Navigate to the folder for your preferred language and select the appropriate `FXMultiProfiles.bat` file.
-2. Copy the `FXMultiProfiles.bat` file to your FXServer folder.
-3. Ensure that the artifact folder containing `FXServer.exe` is in the same directory as the script. Example folder structure:
+1. Create a new file named `FXMultiProfiles.bat` in your FXServer folder, located at:
    ```
    yourserver/
    ├── artifact/
    │   └── FXServer.exe
    └── FXMultiProfiles.bat
    ```
-4. Optionally, you can modify the `TXHOST_DATA_PATH` variable in the script to store profiles (txData) in a custom location:
-
+2. Navigate to the folder for your preferred language in the project repository and copy the contents of the `FXMultiProfiles.bat` file.
+3. Paste the copied contents into the `FXMultiProfiles.bat` file you created in your FXServer folder.
+   **Note:** Downloading the `FXMultiProfiles.bat` file directly from the repository and placing it in your folder may cause issues. Windows may block it due to an unknown publisher, and even if it runs, it may not function correctly. Always create the file manually and copy the contents as described.
+4. Ensure that the `artifact` folder containing `FXServer.exe` is in the same directory as the `FXMultiProfiles.bat` file.
+5. Optionally, you can modify the `TXHOST_DATA_PATH` variable in the script to store profiles (txData) in a custom location:
    ```bat
    set TXHOST_DATA_PATH=D:/your/path/to/txData
    ```
 6. You can also add custom settings before or after the `set TXHOST_DATA_PATH` line. For example available settings like `set TXHOST_*`, refer to [txAdmin Environment Configuration](https://github.com/citizenfx/txAdmin/blob/master/docs/env-config.md).
+7. Before launching the server, you will be prompted to specify a custom port for the server or use the default port.
 
 ---
 
@@ -39,7 +41,7 @@ With this script, you can easily:
 1. Double-click the `FXMultiProfiles.bat` file.
 2. The menu will display available profiles or prompt you to create a new one.
 3. Select an existing profile or create a new one — the script validates the name (only Latin letters and digits, no spaces).
-4. Optionally, specify a custom port for the server or use the default port.
+4. Before the server starts, you will be prompted to specify a custom port for the server or choose to use the default port.
 5. The script will launch `FXServer.exe` with the selected profile and port.
 
 ---
