@@ -17,22 +17,26 @@ With this script, you can easily:
 ## ⚙️ Installation
 
 1. Create a new file named `FXMultiProfiles.bat` in your FXServer folder, located at:
+   
    ```
    yourserver/
    ├── artifact/
    │   └── FXServer.exe
    └── FXMultiProfiles.bat
    ```
-2. Navigate to the folder for your preferred language in the project repository and copy the contents of the `FXMultiProfiles.bat` file.
-3. Paste the copied contents into the `FXMultiProfiles.bat` file you created in your FXServer folder.
+   
+3. Navigate to the folder for your preferred language in the project repository and copy the contents of the `FXMultiProfiles.bat` file.
+4. Paste the copied contents into the `FXMultiProfiles.bat` file you created in your FXServer folder.
    **Note:** Downloading the `FXMultiProfiles.bat` file directly from the repository and placing it in your folder may cause issues. Windows may block it due to an unknown publisher, and even if it runs, it may not function correctly. Always create the file manually and copy the contents as described.
-4. Ensure that the `artifact` folder containing `FXServer.exe` is in the same directory as the `FXMultiProfiles.bat` file.
-5. Optionally, you can modify the `TXHOST_DATA_PATH` variable in the script to store profiles (txData) in a custom location:
+5. Ensure that the `artifact` folder containing `FXServer.exe` is in the same directory as the `FXMultiProfiles.bat` file.
+6. Optionally, you can modify the `TXHOST_DATA_PATH` variable in the script to store profiles (txData) in a custom location:
+   
    ```bat
    set TXHOST_DATA_PATH=D:/your/path/to/txData
    ```
-6. You can also add custom settings before or after the `set TXHOST_DATA_PATH` line. For example available settings like `set TXHOST_*`, refer to [txAdmin Environment Configuration](https://github.com/citizenfx/txAdmin/blob/master/docs/env-config.md).
-7. Before launching the server, you will be prompted to specify a custom port for the server or use the default port.
+   
+8. You can also add custom settings before or after the `set TXHOST_DATA_PATH` line. For example available settings like `set TXHOST_*`, refer to [txAdmin Environment Configuration](https://github.com/citizenfx/txAdmin/blob/master/docs/env-config.md).
+9. Before launching the server, you will be prompted to specify a custom port for the server or use the default port.
 
 ---
 
